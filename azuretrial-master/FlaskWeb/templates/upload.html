@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+<link rel='stylesheet' href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
+
+<div class="jumbotron">
+    <h1>HCL</h1>
+    <p class="lead">Upload Revenue,FTE  Excel files</p>
+</div>
+
+
+<h4>Select file(s) to upload</h4>
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul class=flashes>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+</p>
+<form method="post" action="/uploader" enctype="multipart/form-data">
+    <dl>
+		<p>
+			<input type="file" name="file[]" multiple="true" autocomplete="off" required>
+		</p>
+    </dl>
+    <p>
+		<input type="submit" value="Submit">
+	</p>
+</form>
+<p>
+
+	<a href="/download">Download a file</a>
+
+</p>
+<p>Please upload only Excel file.</p>
+
+{% endblock %}

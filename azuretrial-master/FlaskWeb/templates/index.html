@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>HCL</h1>
+    <p class="lead">Welcome to RFM Website.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting Insights</h2>
+        <p>
+            Insights From Attrition Data,to understand the reasons behind Attrition
+        </p>
+        <p><a class="btn btn-default" href="https://app.powerbi.com/view?r=eyJrIjoiNzUwMmE3MzQtNTgyMS00YzVhLWI4Y2MtYTFlNWM1ZjQ0MGExIiwidCI6IjE4OWRlNzM3LWM5M2EtNGY1YS04YjY4LTZmNGNhOTk0MTkxMiIsImMiOjEwfQ%3D%3D">Click &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>The Python Package Index is a repository of software for the Python programming language.</p>
+        <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Microsoft Azure</h2>
+        <p>You can easily publish to Microsoft Azure using Python Tools for Visual Studio. Find out how you can host your application using a free trial today.</p>
+        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+    </div>
+    <div style="float:right">
+    <form align="right" name="form1" method="post" action="/logout">
+    <label class="logoutLblPos">
+          <input name="submit2" type="submit" id="submit2" value="log out">
+    </label>
+</form>
+</div>
+</div>
+
+{% endblock %}
